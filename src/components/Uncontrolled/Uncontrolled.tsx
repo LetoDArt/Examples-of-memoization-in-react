@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
 
 const Uncontrolled = () => {
-  const input = useRef(null);
+  const input = useRef<HTMLInputElement | null>(null);
 
   const handler = () => {
-    console.log(input.current?.target)
+    console.log(input.current?.value)
   }
 
   return (
     <div>
-      <input ref={input}/>
+      <input type={'text'} ref={input}/>
       <button onClick={handler}>send</button>
     </div>
   );
