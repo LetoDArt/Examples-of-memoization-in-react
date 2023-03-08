@@ -7,7 +7,7 @@ const Counter = () => {
 
   const increaseOption = useCallback(() => setCount((prev) => prev + 1), []);
 
-  const decreaseOption = () => setCount(count - 1);
+  const decreaseOption = useCallback(() => setCount((prev) => prev - 1), []);
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', padding: 20, margin: 'auto'}}>
